@@ -1,0 +1,90 @@
+#field {text-align: center; padding: 50px;}
+#field .header {font-size: 2em;}
+.msg-good,.msg-bad {font-family: Georgia, "Times New Roman", serif; font-weight: bold;}
+.msg-good {color: #51A50E;}
+.msg-bad {color: #D51F1F;}
+table {border-collapse: collapse; margin: auto; font-size: 1.3em;}
+table td {width: 2em; height: 2em; padding: 0; background: #1F5EC0; border: 1px solid #fff; cursor: pointer;}
+table .on:before,
+table .off:before,
+table .over:before {content: ''; display: block; width: 100%; height: 100%; background: #65D30C;
+	-webkit-animation: onclick 300ms ease;
+	animation: onclick 300ms ease;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+@-webkit-keyframes onclick {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+@keyframes onclick {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+table .off:before {background: #D51F1F;}
+table .over:before {background: #FFDF00;}
+table.visible td {cursor: default;}
+table.visible .mark {background: #65D30C;}
+.removing-ok {
+	-webkit-animation: ontable-ok 600ms ease;
+	animation: ontable-ok 600ms ease;
+	-webkit-animation-delay: 0.9s;
+	animation-delay: 0.9s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+.removing-restart {
+	-webkit-animation: ontable-ok 600ms ease;
+	animation: ontable-ok 600ms ease;
+}
+@-webkit-keyframes ontable-ok {
+	to {
+		transform: translateY(-400px);
+		opacity: 0;
+	}
+}
+@keyframes ontable-ok {
+	to {
+		transform: translateY(-400px);
+		opacity: 0;
+	}
+}
+.removing-fail {
+	border: 2px solid #D51F1F;
+	-webkit-animation: ontable-fail 400ms ease;
+	animation: ontable-fail 400ms ease;
+}
+@-webkit-keyframes ontable-fail {
+	25% {
+		transform: translateX(-15px);
+	}
+	50% {
+		transform: translateX(10px);
+	}
+	75% {
+		transform: translateX(-5px);
+	}
+}
+@keyframes ontable-fail {
+	25% {
+		transform: translateX(-15px);
+	}
+	50% {
+		transform: translateX(10px);
+	}
+	75% {
+		transform: translateX(-5px);
+	}
+}
+.track {display: inline-block; vertical-align: middle; width: .6em; height: .6em; border-radius: 1em; margin: 0 2px; box-shadow: 0 0 1px #555; background: #eee;}
+.track.on {background: #65D30C;}
+.track.off {background: #D51F1F;}
+.controls {margin: 5px 0;}
