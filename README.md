@@ -1,6 +1,6 @@
 # Memory field game
 Memory field (Squares) - a memory game.<br>
-[Demo](http://e404.pw/demo/sq/)<br>
+[Demo](http://error404as.github.io/memory-field/)<br>
 <br>
 ToDo's:<br>
 - local stats recording<br>
